@@ -30,4 +30,4 @@ jobs:
         poetry install --directory ./tiny-database
     - name: Test with pytest
       run: |
-        poetry run pytest --cov --cov-report=term-missing --cov-fail-under=100
+        poetry run --directory ./tiny-database pytest --cov --cov-report=term-missing --cov-fail-under=100
