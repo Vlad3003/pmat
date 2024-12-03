@@ -1,10 +1,12 @@
 from database.database import (
-    Database, EmployeeTable, DepartmentTable,
-    ProjectTable, EmployeeProjectTable
+    Database,
+    DepartmentTable,
+    EmployeeProjectTable,
+    EmployeeTable,
+    ProjectTable,
 )
 
-
-if __name__ == "__main__" :
+if __name__ == "__main__":
     db = Database()
 
     # Создание таблиц в базе данных
@@ -75,7 +77,9 @@ if __name__ == "__main__" :
     db.insert("projects", "7,Data Migration,2024-05-01,2024-07-31")
     db.insert("projects", "8,Internal Wiki,2024-02-05,2024-04-05")
     db.insert("projects", "9,Cloud Infrastructure Setup,2024-06-01,2024-12-01")
-    db.insert("projects", "10,Customer Feedback Analysis,2024-07-01,2024-09-01")
+    db.insert(
+        "projects", "10,Customer Feedback Analysis,2024-07-01,2024-09-01"
+    )
 
     db.insert("employees_projects", "1,1,Developer")
     db.insert("employees_projects", "2,1,Project Manager")
