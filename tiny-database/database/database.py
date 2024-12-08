@@ -1,6 +1,6 @@
 import csv
 import os
-from abc import ABC
+from abc import ABC, abstractmethod
 from datetime import date
 from typing import Any, Callable, Literal, Optional, Union
 
@@ -249,6 +249,10 @@ class Table(ABC):
             with open(self.FILE_PATH, "r") as f:
                 reader = csv.DictReader(f)
                 self.data = [row for row in reader]
+
+    @abstractmethod
+    def select(self, *args, **kwargs) -> list[dict[str, str]]:
+        pass  # pragma: no cover
 
     def _check_unique(self, new_row: dict[str, str]) -> None:
         """
