@@ -1,0 +1,2 @@
+Error: Name 'maria' needs to start uppercase!
+Error: Name 'Va-nya' contains an invalid character '-'!
